@@ -1,0 +1,55 @@
+.logo {
+    width: 230px;
+}
+.barra-navegacao {
+    justify-content: space-around !important;
+}
+
+.login-carrinho {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.conta-registro {
+    width: 90px;
+    height: 40px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+  
+}
+
+.login {
+    width: 120px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.minha-conta {
+    font-size: 0.75rem;
+    height: 20px;
+}
+
+.entrar-cadastrar {
+    display: flex;
+    font-size: 0.75rem;
+    height: 20px;
+    justify-content: space-between;
+}
+
+.carrinho {
+    display: flex;
+}
+
+.botao-carrinho {
+    border: 0;
+    background-color: transparent;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}

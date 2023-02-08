@@ -1,0 +1,14 @@
+.categorias {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 20em;
+    margin-right: 20em;
+}
+
+.barra {
+    height: 2px;
+    color: gray;
+    margin-left: 11em;
+    margin-right: 9em;
+
+}
