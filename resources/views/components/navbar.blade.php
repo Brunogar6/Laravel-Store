@@ -1,5 +1,3 @@
-@include('cdn')
-
 @vite(['resources/css/components/navbar.css'])
 
 <nav class="navbar" data-bs-theme="dark">

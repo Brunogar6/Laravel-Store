@@ -1,3 +1,5 @@
+@include('cdn')
+
 @vite(['resources/css/home/index.css'])
 
 <x-navbar/>

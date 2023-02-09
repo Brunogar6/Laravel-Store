@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProdutosController;
+use App\Http\Controllers\CategoriasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +21,6 @@ Route::get('/', function () {
 });
 
 Route::resource('/home', HomeController::class);
+Route::resource('/produtos', ProdutosController::class);
+Route::resource('/categorias', CategoriasController::class);
+
