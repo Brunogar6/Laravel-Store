@@ -1,6 +1,6 @@
 @include('cdn')
 
-@vite(['resources/css/navbar.css'])
+@vite(['resources/css/components/navbar.css'])
 
 <nav class="navbar" data-bs-theme="dark">
     <div class="container-fluid barra-navegacao">

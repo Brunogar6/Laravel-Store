@@ -1,0 +1,30 @@
+.barra {
+    height: 2px;
+    color: gray;
+    margin-left: 11em;
+    margin-right: 9em;
+}
+
+.dropdowns {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 20rem;
+    margin-right: 20rem;
+    margin-bottom: 1rem;
+}
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+  }
+  
+.dropdown>.dropdown-toggle:active {
+    pointer-events: none;
+}
+
+.teste {
+    border-top: red;
+}
+
+.carousel-item img{
+    height: 450px;
+}

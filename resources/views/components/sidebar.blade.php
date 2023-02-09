@@ -1,7 +1,7 @@
 @include('cdn')
 
-@vite(['resources/css/sidebar.css'])
-@vite(['resources/js/sidebar.js'])
+@vite(['resources/css/components/sidebar.css'])
+@vite(['resources/js/components/sidebar.js'])
 
 <section class="app">
     <aside class="sidebar">
