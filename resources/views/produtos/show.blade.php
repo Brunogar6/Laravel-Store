@@ -27,18 +27,18 @@
 </nav>
 
 <div class="d-flex flex-produto">
-    <div class="card text-center">
-        <img src="{{ asset('storage/' . $produto->imagem) }}" class="card-img-top" style="width: 35rem; height: 30rem;">
+    <div class="card text-center" style="width: 45rem; height: 40rem;">
+        <img src="{{ asset('storage/' . $produto->imagem) }}" class="card-img-top" >
     </div>
     <div class="produto">
-        <div class="card text-center" style="width: 30rem; height: 30rem;">
+        <div class="card text-center" style="width: 40rem; height: 40rem;">
             <div class="card-body">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item desconto">{{ $produto->desconto}}% DESC</li>
                     <h5 class="card-title titulo">{{ $produto->nome }}</h5>
                     <li class="list-group-item marca">Marca: {{ $produto->marca }}</li>
                     <li class="list-group-item preco-sem">de R$ {{ number_format($produto->preco, 2, ',')}}</li>
-                    @php($precoDesconto = ($produto->preco) * (1 -($produto->desconto / 100))) 
+                    @php($precoDesconto = ($produto->preco) * (1 -($produto->desconto / 100)))
                     <li class="list-group-item preco-com">R$ {{ number_format($precoDesconto, 2, ',') }}</li>
                     <li class="list-group-item parcelas">Ou 6x de R$ {{ number_format($precoDesconto/6, 2, ',')}} Sem juros</li>
                     <li class="list-group-item"><form class="d-flex">
