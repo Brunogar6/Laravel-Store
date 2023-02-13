@@ -1,0 +1,42 @@
+.produtos {
+    display: flex;
+    margin-left: 50vh;
+    margin-right: 20vh;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.produto {
+    margin-bottom: 5vh;
+
+}
+
+.desconto {
+    background-color: #c8a2c8;
+    color: white;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.botao {
+    background-color: #c8a2c8;
+    border-color: #c8a2c8;
+    color: white;
+}
+
+.titulo {
+    margin-top: 20px;
+    color: #c8a2c8;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    height: 40px;
+}
+
+.preco {
+    color: #c8a2c8;
+    border-bottom: 0 !important;
+}
+
+.parcelas {
+    border-bottom: 0 !important;
+}
