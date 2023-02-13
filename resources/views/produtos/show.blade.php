@@ -28,7 +28,7 @@
 
 <div class="d-flex flex-produto">
     <div class="card text-center" style="width: 45rem; height: 40rem;">
-        <img src="{{ asset('storage/' . $produto->imagem) }}" class="card-img-top" >
+        <img src="{{ asset('storage/' . $produto->imagem) }}" style="height: 100%;" class="card-img-top">
     </div>
     <div class="produto">
         <div class="card text-center" style="width: 40rem; height: 40rem;">
@@ -41,9 +41,9 @@
                     @php($precoDesconto = ($produto->preco) * (1 -($produto->desconto / 100)))
                     <li class="list-group-item preco-com">R$ {{ number_format($precoDesconto, 2, ',') }}</li>
                     <li class="list-group-item parcelas">Ou 6x de R$ {{ number_format($precoDesconto/6, 2, ',')}} Sem juros</li>
-                    <li class="list-group-item"><form class="d-flex">
-                        <input class="form-control input">
-                        <button class="botao btn">Comprar Produto</button>
+                    <li class="list-group-item"><form class="comprar-produto">
+                        <input value="1" class="form-control input">
+                        <button class="botao btn">COMPRAR PRODUTO</button>
                     </form></li>
                     <li class="list-group-item parcelas">* Aqui sua compra é 100% segura, compre com tranquilidade.</li>
                     <li class="list-group-item"><i class="bi bi-truck"></i> Frete e prazo de entrega</li>

@@ -30,10 +30,18 @@
     background-color: #c8a2c8;
     border-color: #c8a2c8;
     color: white;
+    margin-left: 5px;
+    width: 250px;
+    height: 60px;
+}
+.comprar-produto {
+    display: flex;
+    justify-content: center;
 }
 
 .input {
-    width: 40px;
+    width: 70px;
+    text-align: center;
 }
 
 .titulo {
