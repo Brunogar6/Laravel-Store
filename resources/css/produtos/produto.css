@@ -28,12 +28,22 @@
     margin-top: 20px;
     color: #c8a2c8;
     text-transform: uppercase;
-    font-size: 0.9rem;
+    font-size: 1.0rem;
     height: 40px;
 }
 
-.preco {
+.preco-sem {
+    border-bottom: 0 !important;
+    text-decoration: line-through;
+    padding-bottom: 0;
+
+}
+
+.preco-com {
+    padding-top: 0;
+    padding-bottom: 0;
     color: #c8a2c8;
+    font-size: 1.4rem;
     border-bottom: 0 !important;
 }
 

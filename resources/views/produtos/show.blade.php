@@ -26,14 +26,14 @@
     </ol>
 </nav>
 
-<div class="d-flex flex-produto">
-    <div class="card text-center" style="width: 45rem; height: 40rem;">
+<div class="flex-produto">
+    <div class="card text-center" style="width: 35rem; height: 35rem;">
         <img src="{{ asset('storage/' . $produto->imagem) }}" style="height: 100%;" class="card-img-top">
     </div>
     <div class="produto">
-        <div class="card text-center" style="width: 40rem; height: 40rem;">
+        <div class="card text-center" style="width: 35rem; height: 35rem;">
             <div class="card-body">
-                <ul class="list-group list-group-flush">
+                <ul class="list-group list-group-flush" style="display: flex; align-items: center">
                     <li class="list-group-item desconto">{{ $produto->desconto}}% DESC</li>
                     <h5 class="card-title titulo">{{ $produto->nome }}</h5>
                     <li class="list-group-item marca">Marca: {{ $produto->marca }}</li>
@@ -41,12 +41,16 @@
                     @php($precoDesconto = ($produto->preco) * (1 -($produto->desconto / 100)))
                     <li class="list-group-item preco-com">R$ {{ number_format($precoDesconto, 2, ',') }}</li>
                     <li class="list-group-item parcelas">Ou 6x de R$ {{ number_format($precoDesconto/6, 2, ',')}} Sem juros</li>
-                    <li class="list-group-item"><form class="comprar-produto">
+                    <li class="list-group-item" style="border-bottom: 0 !important;"><form class="comprar-produto">
                         <input value="1" class="form-control input">
-                        <button class="botao btn">COMPRAR PRODUTO</button>
+                        <button class="botao-comprar btn">COMPRAR PRODUTO</button>
                     </form></li>
-                    <li class="list-group-item parcelas">* Aqui sua compra é 100% segura, compre com tranquilidade.</li>
-                    <li class="list-group-item"><i class="bi bi-truck"></i> Frete e prazo de entrega</li>
+                    <li class="list-group-item segura">* Aqui sua compra é 100% segura, compre com tranquilidade.</li>
+                    <li class="list-group-item frete"><i class="bi bi-truck"></i> Frete e prazo de entrega</li>
+                    <li class="list-group-item"><form>
+                        <input class="input-frete">
+                        <button class=" botao-frete"> CALCULAR </button>
+                    </form></li>
                 </ul>
             </div>
         </div>

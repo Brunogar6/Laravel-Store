@@ -2,30 +2,25 @@
 
 namespace App\Nova;
 
-use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\Tag;
-use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Image;
-use Laravel\Nova\Fields\Number;
-use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Produto extends Resource
+class Marca extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
-     * @var class-string<\App\Models\Produto>
+     * @var class-string<\App\Models\Marca>
      */
-    public static $model = \App\Models\Produto::class;
+    public static $model = \App\Models\Marca::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
-    public static $title = 'id';
+    public static $title = 'nome';
 
     /**
      * The columns that should be searched.
@@ -46,13 +41,6 @@ class Produto extends Resource
     {
         return [
             ID::make()->sortable(),
-            Text::make('Nome')->required(),
-            BelongsTo::make('Tipo'),
-            BelongsTo::make('Marca'),
-            Number::make('Preco')->step('any')->required(),
-            Number::make('Desconto')->min(0)->max(100),
-            Image::make('Imagem')->path('images/produtos')->required(),
-            Tag::make('Categorias')->showCreateRelationButton()
         ];
     }
 

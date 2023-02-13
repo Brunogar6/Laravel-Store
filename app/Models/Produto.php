@@ -13,4 +13,14 @@ class Produto extends Model
     {
         return $this->belongsToMany(Categoria::class);
     }
+
+    public function tipo()
+    {
+        return $this->belongsTo(Tipo::class, 'tipo_id');
+    }
+
+    public function marca()
+    {
+        return $this->belongsTo(Marca::class, 'marca_id');
+    }
 }

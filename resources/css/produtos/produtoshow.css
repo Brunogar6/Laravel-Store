@@ -1,7 +1,8 @@
 .flex-produto {
     margin-left: 11em;
     margin-right: 9em;
-    justify-content: space-between;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .produtos {
@@ -19,14 +20,15 @@
 .desconto {
     font-size: 0.8rem;
     background-color: #c8a2c8;
-    color: black;
+    color: white;
     margin-left: 30px;
     margin-right: 30px;
     width: 110px;
     padding: 2px;
+    margin-top: 30px;
 }
 
-.botao {
+.botao-comprar {
     background-color: #c8a2c8;
     border-color: #c8a2c8;
     color: white;
@@ -34,9 +36,16 @@
     width: 250px;
     height: 60px;
 }
+
+.botao-comprar:hover{
+    background-color: #b48ab4;
+    color: white;
+}
+
 .comprar-produto {
     display: flex;
     justify-content: center;
+    border-bottom: 0 !important;
 }
 
 .input {
@@ -49,24 +58,64 @@
     color: #c8a2c8;
     text-transform: uppercase;
     font-size: 1.1rem;
+    margin-bottom: 0;
 }
 
 .marca {
+    padding-top: 0;
     border-bottom: 0 !important;
 }
 
 .preco-sem {
     border-bottom: 0 !important;
     text-decoration: line-through;
+    padding-bottom: 0;
 
 }
 
 .preco-com {
+    padding-top: 0;
+    padding-bottom: 0;
     color: #c8a2c8;
     font-size: 1.4rem;
     border-bottom: 0 !important;
 }
 
 .parcelas {
+    padding-top: 0;
     border-bottom: 0 !important;
+}
+
+.segura {
+    font-size: 0.7rem;
+    border-bottom: 0 !important;    
+}
+
+.frete {
+    color: #c8a2c8;
+    border-bottom: 0 !important;
+}
+
+.botao-frete {
+    position: absolute;
+    right: 20px; 
+    top: 18px;
+    border: 0;
+    background: transparent;
+    color: #c8a2c8;
+    outline: none;
+    margin: 0;
+    padding: 0 10px;
+    border-radius: 100px;
+    z-index: 2
+}
+
+.input-frete {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 100px;
+    padding: 10px 100px 10px 20px; 
+    line-height: 1;
+    box-sizing: border-box;
+    outline: none;
 }
