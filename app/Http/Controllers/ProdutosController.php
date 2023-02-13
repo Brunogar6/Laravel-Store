@@ -9,7 +9,9 @@ class ProdutosController extends Controller
 {
     public function index ()
     {
-        $produtos = Produto::all();
+        $produtos = Produto::where('tipo_id', 1)->get();
+
+        dd($produtos);
 
         return view('produtos.index')->with('produtos', $produtos);
     }

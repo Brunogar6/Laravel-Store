@@ -21,5 +21,6 @@ Route::get('/', function () {
 });
 
 Route::resource('/home', HomeController::class);
+
 Route::resource('/produtos', ProdutosController::class);
 
