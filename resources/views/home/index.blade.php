@@ -8,13 +8,10 @@
 
 <div class="dropdowns">
     @php($list = ["Todos", "yesy"])
-    <x-dropdown nome="Brincos" :list="$list"/>
-    @php($list = ["teste", "yesy"])
-    <x-dropdown nome="Colares" :list="$list"/>
-    @php($list = ["teste", "yesy"])
-    <x-dropdown nome="Pulseiras" :list="$list"/>
-    @php($list = ["teste", "yesy"])
-    <x-dropdown nome="Tornozeleiras" :list="$list"/>
+    @foreach($tipos as $tipo)
+        {{dd($tipo->produtos)}}
+        <x-dropdown nome="{{ $tipo->nome }}" slug="{{ $tipo->slug }}" :list="$list"/>
+    @endforeach
 </div>
 
 <x-carousel/>

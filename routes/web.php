@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TiposController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProdutosController;
@@ -24,3 +25,8 @@ Route::resource('/home', HomeController::class);
 
 Route::resource('/produtos', ProdutosController::class);
 
+
+Route::get('/{slug}', [TiposController::class, 'index']);
+
+
+Route::get('categoria/{slug}', [CategoriasController::class,'index']);

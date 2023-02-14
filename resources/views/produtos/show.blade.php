@@ -36,7 +36,7 @@
                 <ul class="list-group list-group-flush" style="display: flex; align-items: center">
                     <li class="list-group-item desconto">{{ $produto->desconto}}% DESC</li>
                     <h5 class="card-title titulo">{{ $produto->nome }}</h5>
-                    <li class="list-group-item marca">Marca: {{ $produto->marca }}</li>
+                    <li class="list-group-item marca">Marca: {{ $produto->marca->nome }}</li>
                     <li class="list-group-item preco-sem">de R$ {{ number_format($produto->preco, 2, ',')}}</li>
                     @php($precoDesconto = ($produto->preco) * (1 -($produto->desconto / 100)))
                     <li class="list-group-item preco-com">R$ {{ number_format($precoDesconto, 2, ',') }}</li>
