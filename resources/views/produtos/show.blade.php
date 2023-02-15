@@ -8,20 +8,24 @@
 <hr class="barra">
 
 <div class="dropdowns">
-    @php($list = ["Todos", "yesy"])
-    <x-dropdown nome="Brincos" :list="$list"/>
-    @php($list = ["teste", "yesy"])
-    <x-dropdown nome="Colares" :list="$list"/>
-    @php($list = ["teste", "yesy"])
-    <x-dropdown nome="Pulseiras" :list="$list"/>
-    @php($list = ["teste", "yesy"])
-    <x-dropdown nome="Tornozeleiras" :list="$list"/>
+    @foreach($tipos as $tipo)
+        @php
+            $list = [];
+            foreach($tipo->produtos as $produto) {
+                if (!in_array($produto->categorias, $list))
+                {
+                    $list = $produto->categorias; 
+                }
+            }
+        @endphp
+        <x-dropdown nome="{{ $tipo->nome }}" slug="{{ $tipo->slug }}" :list="$list"/>
+    @endforeach
 </div>
 
 <nav aria-label="breadcrumb" style="margin-left: 11em">
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="/home">Home</a></li>
-      <li class="breadcrumb-item"><a href="/produtos">Produtos</a></li>
+      <li class="breadcrumb-item"><a href="/{{$produto->tipo->slug}}">{{$produto->tipo->nome}}</a></li>
       <li class="breadcrumb-item active" aria-current="page">{{ $produto->nome }}</li>
     </ol>
 </nav>

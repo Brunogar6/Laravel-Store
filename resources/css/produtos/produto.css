@@ -14,8 +14,9 @@
 .desconto {
     background-color: #c8a2c8;
     color: white;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding: 2px;
 }
 
 .botao {
@@ -36,7 +37,6 @@
     border-bottom: 0 !important;
     text-decoration: line-through;
     padding-bottom: 0;
-
 }
 
 .preco-com {

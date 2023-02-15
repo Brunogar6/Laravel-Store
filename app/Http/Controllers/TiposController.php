@@ -11,7 +11,8 @@ class TiposController extends Controller
     public function index(string $tipo)
     {
         $tipo = Tipo::where('slug', $tipo)->first();
+        $tipos = Tipo::all();
 
-        return view('produtos.index')->with('produtos', $tipo->produtos);
+        return view('produtos.index')->with(['produtos' => $tipo->produtos, 'tipos'=> $tipos]);
     }
 }

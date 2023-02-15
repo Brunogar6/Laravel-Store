@@ -5,7 +5,7 @@
 ])
 
 <div class="dropdown">
-    <a href="{{ $slug }}">
+    <a href="/{{ $slug }}">
     <button
         class="btn dropdown-toggle"
         type="button"
@@ -16,10 +16,11 @@
     >
         {{ $nome }}
     </button></a>
+
     <ul class="dropdown-menu teste" aria-labelledby="dropdownMenuButton">
         @if(!empty($list))
             @foreach($list as $key => $value)
-                <li><a class="dropdown-item" href="">{{ $value }}</a></li>
+                <li><a class="dropdown-item" href="">{{ $value->nome }}</a></li>
             @endforeach
         @endif
 

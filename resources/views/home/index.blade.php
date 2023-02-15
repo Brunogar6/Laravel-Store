@@ -7,9 +7,16 @@
 <hr class="barra">
 
 <div class="dropdowns">
-    @php($list = ["Todos", "yesy"])
     @foreach($tipos as $tipo)
-        {{dd($tipo->produtos)}}
+        @php
+            $list = [];
+            foreach($tipo->produtos as $produto) {
+                if (!in_array($produto->categorias, $list))
+                {
+                    $list = $produto->categorias; 
+                }
+            }
+        @endphp
         <x-dropdown nome="{{ $tipo->nome }}" slug="{{ $tipo->slug }}" :list="$list"/>
     @endforeach
 </div>
