@@ -14,7 +14,7 @@
             foreach($tipo->produtos as $produto) {
                 if (!in_array($produto->categorias, $list))
                 {
-                    $list = $produto->categorias; 
+                    $list = $produto->categorias;
                 }
             }
         @endphp
@@ -28,6 +28,8 @@
       <li class="breadcrumb-item active" aria-current="page">{{ $produto->tipo->nome }}</li>
     </ol>
 </nav>
+
+<x-filter/>
 
 <div class="produtos">
     @foreach ($produtos as $produto)

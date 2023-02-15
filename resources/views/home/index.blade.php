@@ -13,7 +13,7 @@
             foreach($tipo->produtos as $produto) {
                 if (!in_array($produto->categorias, $list))
                 {
-                    $list = $produto->categorias; 
+                    $list = $produto->categorias;
                 }
             }
         @endphp
