@@ -8,10 +8,9 @@
         }
 
         .section {
-            display: flex;
-            margin-bottom: 25px;
             margin-left: 11rem;
-            margin-right: 9rem;
+            width: 15%;
+            position: absolute;
         }
 
         .bgcolor{
@@ -114,90 +113,89 @@
 <body>
 
 <div>
-    <div  class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <section class="section section-small col-xs-12">
 
-        <section class="section section-small col-xs-12">
+        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+            <div class="col-lg-4 col-md-2 col-sm-6 col-xs-6 nopadding">
+                <span class="subtitle">Marca</span>
+            </div>
 
-            <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-                <div class="col-lg-4 col-md-2 col-sm-6 col-xs-6 nopadding">
-                    <span class="subtitle">Marca</span>
-                </div>
-
-                <div class=" col-lg-8 col-md-10 col-sm-6 col-xs-12">
-                    <div class="form-group">
-                        <input type="text" class="form-control datetimepicker" placeholder="pick a date">
-                        <div class="validation-row">
-                        </div>
+            <div class=" col-lg-8 col-md-10 col-sm-6 col-xs-12">
+                <div class="form-group">
+                    <select class="form-control ">
+                        <option>teste</option>
+                    </select>
+                    <div class="validation-row">
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-                <div class="col-lg-4 col-md-2 col-sm-6 col-xs-6 nopadding">
-                    <span class="subtitle">Category</span>
-                </div>
+        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+            <div class="col-lg-4 col-md-2 col-sm-6 col-xs-6 nopadding">
+                <span class="subtitle">Category</span>
+            </div>
 
-                <div class="col-lg-8 col-md-10 col-sm-6 col-xs-12">
-                    <div class="form-group">
-                        <select class="form-control" data-val="true" data-val-number="The field CategoryID must be a number." data-val-required="The CategoryID field is required." id="CategoryID" name="CategoryID"><option selected="selected" value="1">All</option>
-                            <option value="2">Adventure</option>
-                            <option value="3">Culture &amp; Arts</option>
-                            <option value="4">Festival &amp; Events</option>
-                            <option value="5">Food &amp; Drink</option>
-                            <option value="6">Historical</option>
-                            <option value="7">Leisure &amp; Sports</option>
-                            <option value="8">Nature &amp; Rural</option>
-                            <option value="9">Nightlife &amp; Party</option>
-                            <option value="10">Shopping &amp; Market</option>
-                            <option value="11">Transportation</option>
-                            <option value="12">Business &amp; Interpretation</option>
-                            <option value="13">Photography</option>
-                        </select>
-                        <div class="validation-row">
-                            <span class="field-validation-valid" data-valmsg-for="CategoryID" data-valmsg-replace="true"></span>
-                        </div>
+            <div class="col-lg-8 col-md-10 col-sm-6 col-xs-12">
+                <div class="form-group">
+                    <select class="form-control" data-val="true" data-val-number="The field CategoryID must be a number." data-val-required="The CategoryID field is required." id="CategoryID" name="CategoryID"><option selected="selected" value="1">All</option>
+                        <option value="2">Adventure</option>
+                        <option value="3">Culture &amp; Arts</option>
+                        <option value="4">Festival &amp; Events</option>
+                        <option value="5">Food &amp; Drink</option>
+                        <option value="6">Historical</option>
+                        <option value="7">Leisure &amp; Sports</option>
+                        <option value="8">Nature &amp; Rural</option>
+                        <option value="9">Nightlife &amp; Party</option>
+                        <option value="10">Shopping &amp; Market</option>
+                        <option value="11">Transportation</option>
+                        <option value="12">Business &amp; Interpretation</option>
+                        <option value="13">Photography</option>
+                    </select>
+                    <div class="validation-row">
+                        <span class="field-validation-valid" data-valmsg-for="CategoryID" data-valmsg-replace="true"></span>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-                <div class="col-lg-4 col-md-2 col-sm-6 col-xs-12 nopadding">
-                    <span class="subtitle">Language</span>
-                </div>
+        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+            <div class="col-lg-4 col-md-2 col-sm-6 col-xs-12 nopadding">
+                <span class="subtitle">Language</span>
+            </div>
 
-                <div class=" col-lg-8 col-md-10 col-sm-6 col-xs-12">
-                    <div class="form-group">
-                        <select class="form-control" data-val="true" data-val-number="The field CategoryID must be a number." data-val-required="The CategoryID field is required." id="CategoryID" name="CategoryID"><option selected="selected" value="1">All</option>
-                            <option value="2">Adventure</option>
-                            <option value="3">Culture &amp; Arts</option>
-                            <option value="4">Festival &amp; Events</option>
-                            <option value="5">Food &amp; Drink</option>
-                            <option value="6">Historical</option>
-                            <option value="7">Leisure &amp; Sports</option>
-                            <option value="8">Nature &amp; Rural</option>
-                            <option value="9">Nightlife &amp; Party</option>
-                            <option value="10">Shopping &amp; Market</option>
-                            <option value="11">Transportation</option>
-                            <option value="12">Business &amp; Interpretation</option>
-                            <option value="13">Photography</option>
-                        </select>
-                        <div class="validation-row">
-                            <span class="field-validation-valid" data-valmsg-for="CategoryID" data-valmsg-replace="true"></span>
-                        </div>
+            <div class=" col-lg-8 col-md-10 col-sm-6 col-xs-12">
+                <div class="form-group">
+                    <select class="form-control" data-val="true" data-val-number="The field CategoryID must be a number." data-val-required="The CategoryID field is required." id="CategoryID" name="CategoryID"><option selected="selected" value="1">All</option>
+                        <option value="2">Adventure</option>
+                        <option value="3">Culture &amp; Arts</option>
+                        <option value="4">Festival &amp; Events</option>
+                        <option value="5">Food &amp; Drink</option>
+                        <option value="6">Historical</option>
+                        <option value="7">Leisure &amp; Sports</option>
+                        <option value="8">Nature &amp; Rural</option>
+                        <option value="9">Nightlife &amp; Party</option>
+                        <option value="10">Shopping &amp; Market</option>
+                        <option value="11">Transportation</option>
+                        <option value="12">Business &amp; Interpretation</option>
+                        <option value="13">Photography</option>
+                    </select>
+                    <div class="validation-row">
+                        <span class="field-validation-valid" data-valmsg-for="CategoryID" data-valmsg-replace="true"></span>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="col-lg-3 col-md-12 col-sm-612 col-xs-12">
-                <div class="text-center col-lg-1 col-md-12 col-sm-12 col-xs-12">
-                    <button class="botao-filtro btn-lg btn-kootour-bold btn-search" type="submit">Search</button>
-                </div>
+        <div class="col-lg-3 col-md-12 col-sm-612 col-xs-12">
+            <div class="text-center col-lg-1 col-md-12 col-sm-12 col-xs-12">
+                <button class="botao-filtro btn-lg btn-kootour-bold btn-search" type="submit">Search</button>
             </div>
+        </div>
 
 
-        </section>
+    </section>
 
-    </div>
 </div>
 
 </div>

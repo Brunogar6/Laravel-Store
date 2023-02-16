@@ -12,13 +12,15 @@
         @php
             $list = [];
             foreach($tipo->produtos as $produto) {
-                if (!in_array($produto->categorias, $list))
+
+                if (!$produto->categorias->contains($list))
                 {
                     $list = $produto->categorias;
                 }
             }
         @endphp
         <x-dropdown nome="{{ $tipo->nome }}" slug="{{ $tipo->slug }}" :list="$list"/>
+
     @endforeach
 </div>
 
@@ -30,6 +32,7 @@
 </nav>
 
 <x-filter/>
+
 
 <div class="produtos">
     @foreach ($produtos as $produto)
@@ -51,3 +54,5 @@
         </div>
     @endforeach
 </div>
+
+
