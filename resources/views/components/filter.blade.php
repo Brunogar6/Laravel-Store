@@ -1,17 +1,17 @@
-@vite(['resources/css/components/filter.css'])
-@vite(['resources/js/components/filter.js'])
-
 <html>
-<title>K Filter Bar</title>
-
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <style>
-
 
         @media (min-width: 1200px){
             .col-lg-12 {
                 width: 100%;}
+        }
+
+        .section {
+            display: flex;
+            margin-bottom: 25px;
+            margin-left: 11rem;
+            margin-right: 9rem;
         }
 
         .bgcolor{
@@ -26,8 +26,6 @@
             background-color:lightblue;
         }
 
-        /*ayemin*/
-
         section.section.section-small {
             padding-top: 15px;
             padding-bottom: 30px;
@@ -38,7 +36,7 @@
         section.section {
             margin-top: 25px;
             background-color: #fff;
-            border-top: 10px solid #0cc;
+            border-top: 10px solid #c8a2c8;
             border-radius: 3px;
             box-shadow: -1px 0 2px 0 rgba(0,0,0,.12), 1px 0 2px 0 rgba(0,0,0,.12), 0 1px 1px 0 rgba(0,0,0,.12);
         }
@@ -57,7 +55,7 @@
         .btn-kootour, .btn-kootour-bold {
             border-radius: 3px;
             color: #fff;
-            background-color: #0cc;
+            background-color: #c8a2c8;
             width: 200px;
         }
 
@@ -102,52 +100,42 @@
             text-align: center;
         }
         .subtitle {
-            font-size: 18px;
-            font-size: 1.8rem;
-            color: #0cc;
+            font-size: 1.3rem;
+            color: #c8a2c8;
             padding:0;
         }
 
         .nopadding{
             padding:0;
         }
-        /*ayemin*/
-
     </style>
 </head>
 
 <body>
 
-<div class="container">
+<div>
     <div  class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
         <section class="section section-small col-xs-12">
 
-
             <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
                 <div class="col-lg-4 col-md-2 col-sm-6 col-xs-6 nopadding">
-                    <span class="subtitle">Calendar:</span>
+                    <span class="subtitle">Marca</span>
                 </div>
-
 
                 <div class=" col-lg-8 col-md-10 col-sm-6 col-xs-12">
                     <div class="form-group">
                         <input type="text" class="form-control datetimepicker" placeholder="pick a date">
-                        <!--dropdown-->
                         <div class="validation-row">
-                            <!--validation-->
                         </div>
                     </div>
                 </div>
             </div>
 
-
             <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
                 <div class="col-lg-4 col-md-2 col-sm-6 col-xs-6 nopadding">
                     <span class="subtitle">Category</span>
                 </div>
-
-
 
                 <div class="col-lg-8 col-md-10 col-sm-6 col-xs-12">
                     <div class="form-group">
@@ -172,14 +160,10 @@
                 </div>
             </div>
 
-
-
-
             <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
                 <div class="col-lg-4 col-md-2 col-sm-6 col-xs-12 nopadding">
                     <span class="subtitle">Language</span>
                 </div>
-
 
                 <div class=" col-lg-8 col-md-10 col-sm-6 col-xs-12">
                     <div class="form-group">
@@ -204,7 +188,6 @@
                 </div>
             </div>
 
-
             <div class="col-lg-3 col-md-12 col-sm-612 col-xs-12">
                 <div class="text-center col-lg-1 col-md-12 col-sm-12 col-xs-12">
                     <button class="botao-filtro btn-lg btn-kootour-bold btn-search" type="submit">Search</button>
@@ -217,7 +200,7 @@
     </div>
 </div>
 
-</div> <!--class continer-->
+</div>
 
 </body>
 
