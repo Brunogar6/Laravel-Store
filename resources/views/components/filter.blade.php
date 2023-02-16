@@ -9,6 +9,7 @@
 
         .section {
             margin-left: 11rem;
+            margin-right: 2rem;
             width: 15%;
             position: absolute;
         }
@@ -115,23 +116,22 @@
 <div>
     <section class="section section-small col-xs-12">
 
-        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="col-lg-4 col-md-2 col-sm-6 col-xs-6 nopadding">
                 <span class="subtitle">Marca</span>
             </div>
 
             <div class=" col-lg-8 col-md-10 col-sm-6 col-xs-12">
                 <div class="form-group">
-                    <select class="form-control ">
-                        <option>teste</option>
-                    </select>
+                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                    <label for="vehicle1"> I have a bike</label><br>
                     <div class="validation-row">
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="col-lg-4 col-md-2 col-sm-6 col-xs-6 nopadding">
                 <span class="subtitle">Category</span>
             </div>
@@ -159,7 +159,7 @@
             </div>
         </div>
 
-        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="col-lg-4 col-md-2 col-sm-6 col-xs-12 nopadding">
                 <span class="subtitle">Language</span>
             </div>
