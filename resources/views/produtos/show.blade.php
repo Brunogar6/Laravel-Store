@@ -12,7 +12,7 @@
         @php
             $list = [];
             foreach($tipo->produtos as $produto) {
-                if (!in_array($produto->categorias, $list))
+                if (!$produto->categorias->contains($list))
                 {
                     $list = $produto->categorias; 
                 }

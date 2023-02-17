@@ -12,7 +12,6 @@
         id="dropdownMenuButton"
         data-mdb-toggle="dropdown"
         aria-expanded="false"
-        href="/produtos"
     >
         {{ $nome }}
     </button></a>

@@ -1,3 +1,8 @@
+@props([
+    'marcas' => '',
+    'slug' => ''
+])
+
 <html>
 <head>
     <style>
@@ -113,7 +118,7 @@
 
 <body>
 
-<div>
+<form action= "{{route('filter.index', $slug)}}">
     <section class="section section-small col-xs-12">
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -121,82 +126,28 @@
                 <span class="subtitle">Marca</span>
             </div>
 
-            <div class=" col-lg-8 col-md-10 col-sm-6 col-xs-12">
-                <div class="form-group">
-                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                    <label for="vehicle1"> I have a bike</label><br>
-                    <div class="validation-row">
-                    </div>
+            @foreach($marcas as $marca)
+            <div class="input-group mb-3">
+                <div class="input-group-text">
+                    <input class="form-check-input mt-0" data-val="true" type="checkbox" value="{{ $marca->nome }}"  name="marca[]  ">
                 </div>
-            </div>
-        </div>
-
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <div class="col-lg-4 col-md-2 col-sm-6 col-xs-6 nopadding">
-                <span class="subtitle">Category</span>
+                <input type="text" class="form-control" readonly value="{{ $marca->nome }}">
             </div>
 
-            <div class="col-lg-8 col-md-10 col-sm-6 col-xs-12">
-                <div class="form-group">
-                    <select class="form-control" data-val="true" data-val-number="The field CategoryID must be a number." data-val-required="The CategoryID field is required." id="CategoryID" name="CategoryID"><option selected="selected" value="1">All</option>
-                        <option value="2">Adventure</option>
-                        <option value="3">Culture &amp; Arts</option>
-                        <option value="4">Festival &amp; Events</option>
-                        <option value="5">Food &amp; Drink</option>
-                        <option value="6">Historical</option>
-                        <option value="7">Leisure &amp; Sports</option>
-                        <option value="8">Nature &amp; Rural</option>
-                        <option value="9">Nightlife &amp; Party</option>
-                        <option value="10">Shopping &amp; Market</option>
-                        <option value="11">Transportation</option>
-                        <option value="12">Business &amp; Interpretation</option>
-                        <option value="13">Photography</option>
-                    </select>
-                    <div class="validation-row">
-                        <span class="field-validation-valid" data-valmsg-for="CategoryID" data-valmsg-replace="true"></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <div class="col-lg-4 col-md-2 col-sm-6 col-xs-12 nopadding">
-                <span class="subtitle">Language</span>
-            </div>
-
-            <div class=" col-lg-8 col-md-10 col-sm-6 col-xs-12">
-                <div class="form-group">
-                    <select class="form-control" data-val="true" data-val-number="The field CategoryID must be a number." data-val-required="The CategoryID field is required." id="CategoryID" name="CategoryID"><option selected="selected" value="1">All</option>
-                        <option value="2">Adventure</option>
-                        <option value="3">Culture &amp; Arts</option>
-                        <option value="4">Festival &amp; Events</option>
-                        <option value="5">Food &amp; Drink</option>
-                        <option value="6">Historical</option>
-                        <option value="7">Leisure &amp; Sports</option>
-                        <option value="8">Nature &amp; Rural</option>
-                        <option value="9">Nightlife &amp; Party</option>
-                        <option value="10">Shopping &amp; Market</option>
-                        <option value="11">Transportation</option>
-                        <option value="12">Business &amp; Interpretation</option>
-                        <option value="13">Photography</option>
-                    </select>
-                    <div class="validation-row">
-                        <span class="field-validation-valid" data-valmsg-for="CategoryID" data-valmsg-replace="true"></span>
-                    </div>
-                </div>
-            </div>
+            @endforeach
+            
         </div>
 
         <div class="col-lg-3 col-md-12 col-sm-612 col-xs-12">
             <div class="text-center col-lg-1 col-md-12 col-sm-12 col-xs-12">
-                <button class="botao-filtro btn-lg btn-kootour-bold btn-search" type="submit">Search</button>
+                <a><button class="botao-filtro btn-lg btn-kootour-bold btn-search" action type="submit">Buscar</button>
             </div>
         </div>
 
 
     </section>
 
-</div>
+    </form>
 
 </div>
 

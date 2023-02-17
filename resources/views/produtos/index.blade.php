@@ -31,7 +31,7 @@
     </ol>
 </nav>
 
-<x-filter/>
+<x-filter slug="{{$produto->tipo->slug}}" :marcas="$marcas"/>
 
 
 <div class="produtos">
