@@ -11,16 +11,22 @@
     @foreach($tipos as $tipo)
         @php
             $list = [];
-            foreach($tipo->produtos as $produto) {
-                if (!$produto->categorias->contains($list))
-                {
-                    $list = $produto->categorias; 
+            foreach($tipo->produtos as $produtoValue) {
+                foreach($produtoValue->categorias as $categoria) {
+                    $list[] = $categoria;
                 }
             }
+
         @endphp
+
         <x-dropdown nome="{{ $tipo->nome }}" slug="{{ $tipo->slug }}" :list="$list"/>
+
+        @php
+            unset($list);
+        @endphp
     @endforeach
 </div>
+
 
 <nav aria-label="breadcrumb" style="margin-left: 11em">
     <ol class="breadcrumb">

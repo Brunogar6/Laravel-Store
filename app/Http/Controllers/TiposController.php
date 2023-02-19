@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Tipo;
 use App\Models\Marca;
 use App\Models\Produto;
+use App\Models\Categoria;
 use Illuminate\Http\Request;
 
 class TiposController extends Controller
@@ -13,23 +14,30 @@ class TiposController extends Controller
     {
         $tipo = Tipo::where('slug', $tipo)->first();
         $tipos = Tipo::all();
-        $allMarcas = Marca::all();
+        $produtos = $tipo->produtos;
 
+        if ($request->has('categoria')) {
 
-        if ($request->has('marca')){
+            $produtosQuery = Produto::with('categorias')->whereHas('categorias', function ($query) use ($request) {
+                $query->whereIn('categoria_id', $request->categoria);
+            })->get();
 
-            $marcas = Marca::whereIn('nome', $request->marca)->get();
-            $produtos = collect();
-
-            foreach($marcas as $marca) {
-                $produtos->add($marca->produtos->first());
-            }
-
-
-            return view('produtos.index')->with(['produtos' => $produtos, 'tipos'=> $tipos, 'marcas' => $allMarcas]);
+            $produtos = $produtosQuery->intersect($produtos);
         }
 
+        if ($request->has('preco')) {
 
-        return view('produtos.index')->with(['produtos' => $tipo->produtos, 'tipos'=> $tipos, 'marcas' => $allMarcas]);
+            $preco = explode(' ', $request->preco);
+
+            $produtosQuery = Produto::where([
+                ['preco', '>=', $preco[0]],
+                ['preco', '<=', $preco[1]]
+
+            ])->get();
+
+            $produtos = $produtosQuery->intersect($produtos);
+        }
+
+        return view('produtos.index')->with(['produtos' => $produtos,'tipoPag' => $tipo, 'tipos'=> $tipos]);
     }
 }

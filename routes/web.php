@@ -26,5 +26,3 @@ Route::resource('/home', HomeController::class);
 Route::resource('/produtos', ProdutosController::class);
 
 Route::get('/{slug}', [TiposController::class, 'index'])->name('filter.index');
-
-Route::get('categoria/{slug}', [CategoriasController::class,'index']);

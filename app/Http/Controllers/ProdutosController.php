@@ -23,7 +23,7 @@ class ProdutosController extends Controller
             return response()->json(['menssage' => 'Not Found'], 404);
         }
 
-        return view('produtos.show')->with(['produto'=> $produtoModel, 'tipos'=> $tipos]);
 
+        return view('produtos.show')->with(['produto'=> $produtoModel, 'tipos'=> $tipos]);
     }
 }

@@ -11,13 +11,18 @@
         @php
             $list = [];
             foreach($tipo->produtos as $produto) {
-                if (!$produto->categorias->contains($list))
-                {
-                    $list = $produto->categorias;
+                foreach($produto->categorias as $categoria) {
+                    $list[] = $categoria;
                 }
             }
+
         @endphp
+
         <x-dropdown nome="{{ $tipo->nome }}" slug="{{ $tipo->slug }}" :list="$list"/>
+
+        @php
+            unset($list);
+        @endphp
     @endforeach
 </div>
 

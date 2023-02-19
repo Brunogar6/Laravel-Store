@@ -1,4 +1,7 @@
+@vite(['resources/js/components/filter.js'])
+
 @props([
+    'categorias' => '' ,
     'marcas' => '',
     'slug' => ''
 ])
@@ -123,19 +126,61 @@
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="col-lg-4 col-md-2 col-sm-6 col-xs-6 nopadding">
-                <span class="subtitle">Marca</span>
+                <span class="subtitle">Categorias</span>
             </div>
 
-            @foreach($marcas as $marca)
+            @foreach($categorias as $categoria)
             <div class="input-group mb-3">
                 <div class="input-group-text">
-                    <input class="form-check-input mt-0" data-val="true" type="checkbox" value="{{ $marca->nome }}"  name="marca[]  ">
+                    <input class="form-check-input mt-0" data-val="true" type="checkbox" value="{{ $categoria->id }}"  name="categoria[]">
                 </div>
-                <input type="text" class="form-control" readonly value="{{ $marca->nome }}">
+                <input type="text" class="form-control" readonly value="{{ $categoria->nome }}">
             </div>
 
             @endforeach
             
+        </div>
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="col-lg-4 col-md-2 col-sm-6 col-xs-6 nopadding">
+                <span class="subtitle">Preços</span>
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-text">
+                    <input class="form-check-input mt-0 check" data-val="true" type="checkbox" value="0 25"  name="preco">
+                </div>
+                <input type="text" class="form-control" readonly value="Até R$ 25,00">
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-text">
+                    <input class="form-check-input mt-0 check" data-val="true" type="checkbox" value="25 45"  name="preco">
+                </div>
+                <input type="text" class="form-control" readonly value="De R$ 25,00 à R$ 45,00">
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-text">
+                    <input class="form-check-input mt-0 check" data-val="true" type="checkbox" value="45 65"  name="preco">
+                </div>
+                <input type="text" class="form-control" readonly value="De R$ 45,00 à R$ 65,00">
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-text">
+                    <input class="form-check-input mt-0 check" data-val="true" type="checkbox" value="65 85"  name="preco">
+                </div>
+                <input type="text" class="form-control" readonly value="De R$ 65,00 à R$ 85,00">
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-text">
+                    <input class="form-check-input mt-0 check" data-val="true" type="checkbox" value="85 500"  name="preco">
+                </div>
+                <input type="text" class="form-control" readonly value="Acima de R$ 85,00">
+            </div>
+
         </div>
 
         <div class="col-lg-3 col-md-12 col-sm-612 col-xs-12">
@@ -152,6 +197,8 @@
 </div>
 
 </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 

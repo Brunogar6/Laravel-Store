@@ -7,31 +7,39 @@
 
 <hr class="barra">
 
+
 <div class="dropdowns">
     @foreach($tipos as $tipo)
         @php
             $list = [];
             foreach($tipo->produtos as $produto) {
-
-                if (!$produto->categorias->contains($list))
-                {
-                    $list = $produto->categorias;
+                foreach($produto->categorias as $categoria) {
+                    $list[] = $categoria;
                 }
             }
+
         @endphp
+
         <x-dropdown nome="{{ $tipo->nome }}" slug="{{ $tipo->slug }}" :list="$list"/>
 
+        @php
+            if ($tipo->nome ===  $tipoPag->nome){
+                $categorias = $list;
+            }
+            unset($list);
+        @endphp
     @endforeach
 </div>
 
 <nav aria-label="breadcrumb" style="margin-left: 11em">
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="/home">Home</a></li>
-      <li class="breadcrumb-item active" aria-current="page">{{ $produto->tipo->nome }}</li>
+      <li class="breadcrumb-item active" aria-current="page">{{ $tipoPag->nome }}</li>
     </ol>
 </nav>
 
-<x-filter slug="{{$produto->tipo->slug}}" :marcas="$marcas"/>
+
+<x-filter slug="{{$tipoPag->slug}}" :categorias="$categorias"/>
 
 
 <div class="produtos">
