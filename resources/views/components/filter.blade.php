@@ -22,6 +22,11 @@
             position: absolute;
         }
 
+        .filtro {
+            display: flex;
+            justify-content: center;
+        }
+
         .bgcolor{
             background-color: #fff;
         }
@@ -125,7 +130,7 @@
     <section class="section section-small col-xs-12">
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <div class="col-lg-4 col-md-2 col-sm-6 col-xs-6 nopadding">
+            <div class="filtro mb-2">
                 <span class="subtitle">Categorias</span>
             </div>
 
@@ -142,7 +147,7 @@
         </div>
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <div class="col-lg-4 col-md-2 col-sm-6 col-xs-6 nopadding">
+            <div class="filtro mb-2">
                 <span class="subtitle">Preços</span>
             </div>
 
@@ -183,8 +188,8 @@
 
         </div>
 
-        <div class="col-lg-3 col-md-12 col-sm-612 col-xs-12">
-            <div class="text-center col-lg-1 col-md-12 col-sm-12 col-xs-12">
+        <div class="filtro">
+            <div class="">
                 <a><button class="botao-filtro btn-lg btn-kootour-bold btn-search" action type="submit">Buscar</button>
             </div>
         </div>

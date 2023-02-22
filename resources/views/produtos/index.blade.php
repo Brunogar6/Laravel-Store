@@ -14,7 +14,9 @@
             $list = [];
             foreach($tipo->produtos as $produto) {
                 foreach($produto->categorias as $categoria) {
-                    $list[] = $categoria;
+                    if(!in_array($categoria, $list)){
+                        $list[] = $categoria;
+                    }
                 }
             }
 
